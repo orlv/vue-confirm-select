@@ -20,7 +20,7 @@
   export default {
     template: '#vue-confirm-select-template',
 
-    data: function () {
+    data () {
       return {
         busy: false,
         selectedValue: '',
@@ -38,13 +38,13 @@
     computed: {},
 
     methods: {
-      confirm: function () {
+      confirm () {
         this.selectedTitle = this.list.filter(el => el.value === this.selectedValue)[0].title
         this.callback(this.selectedValue)
         this.busy = false
       },
 
-      cancelClick: function () {
+      cancelClick () {
         this.selectedValue = this.value || ''
         this.selectedTitle = this.title || ''
         this.busy = false
